@@ -1,11 +1,15 @@
 package jm.task.core.jdbc;
 
 
+import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
+import java.sql.SQLException;
+
 public class Main {
-    public static void main(String[] args) {
-        UserServiceImpl user = new UserServiceImpl();
+    private final static UserService user = new UserServiceImpl();
+    public static void main(String[] args) throws SQLException {
+
 
         user.createUsersTable();
 
@@ -18,7 +22,5 @@ public class Main {
         user.cleanUsersTable();
         user.dropUsersTable();
 
-
-        // реализуйте алгоритм здесь
     }
 }
