@@ -14,9 +14,9 @@ public class Util {
 
     }
 
-    static String url = "jdbc:mysql://localhost:3306/test1";
-    static String username = "root";
-    static String password = "mpati036";
+    private static final String url = "jdbc:mysql://localhost:3306/test1";
+    private static final String username = "root";
+    private static final String password = "mpati036";
     public static Connection getConnection() {
         Connection conn = null;
         try {
